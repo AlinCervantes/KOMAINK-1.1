@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pantalla Oscura Suave</title>
+    <script src="https://kit.fontawesome.com/199c795f57.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <link rel="stylesheet" href="css/style_pago.css"> 
+
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <div class="container">
+            <h1>Completa tu pago</h1>
+            <div id="info-plan"></div>
+
+            <div class="metodo-pago">
+                <h3>Tarjeta de Crédito/Débito</h3>
+                <input type="text" id="numeroTarjeta" placeholder="Número de tarjeta"
+                    maxlength="19" oninput="formatoTarjeta(this)">
+                <div class="tarjeta-enmascarada" id="tarjetaEnmascarada"></div>
+                <input type="month" id="fechaExp" placeholder="MM/AA" required>
+                <input type="password" id="cvv" placeholder="CVV" maxlength="3" required>
+            </div>
+
+            <div class="metodo-pago">
+                <h3>PayPal</h3>
+                <button onclick="simularPayPal()" class="btn-primary">Pagar con PayPal</button>
+            </div>
+
+            <div class="metodo-pago">
+                <h3>Pago en OXXO</h3>
+                <div id="referenciaOxxo"></div>
+                <button onclick="generarReferenciaOXXO()" class="btn-secondary">Generar Referencia de Pago</button>
+            </div>
+
+            <button onclick="procesarPago()">Confirmar Pago</button>
+        </div>
+
+  <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-grid">
+                <div class="footer-links-col">
+                    <h4>Comunidad</h4>
+                    <ul>
+                        <li><a href="#">Términos de uso</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Ayuda</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Autores Independientes</h4>
+                    <ul>
+                        <li><a href="#">Únete</a></li>
+                        <li><a href="#">Premios</a></li>
+                        <li><a href="#">Preguntas y condiciones</a></li>
+                        <li><a href="#">Eventos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Preferencias</h4>
+                    <ul>
+                        <li><a href="#">Idioma</a></li>
+                        <li><a href="#">Modo oscuro</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Komaink. Todos los derechos reservados. México.</p>
+                <p>Tax ID: 0-04-000-00-000000. Av. Tecnológico, Aguascalientes, México.</p>
+                <img src="images/logoKOMAINK.png" alt="Komaink Logo">
+
+            </div>
+        </div>
+    </footer>
+
+  <script src="script2.js"></script>
+</body>
+</html>

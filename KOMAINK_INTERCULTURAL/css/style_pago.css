@@ -1,0 +1,259 @@
+/* Variables CSS para consistencia con el diseño principal */
+:root {
+    --primary-bg-color: #1a1a1a; /* Fondo oscuro principal */
+    --secondary-bg-color: #2a2a2a; /* Fondo oscuro para tarjetas/secciones */
+    --text-color: #e0e0e0; /* Gris claro para el texto (usé el que tenías) */
+    --accent-color: #8c00ff; /* Morado de acento */
+    --light-grey-text: #ccc; /* Texto gris claro */
+    --border-color: #444; /* Borde oscuro */
+    --input-bg-color: rgba(255, 255, 255, 0.1); /* Fondo de input semi-transparente */
+    --button-primary-bg: #8c00ff;
+    --button-primary-text: #ffffff;
+    --button-secondary-bg: transparent;
+    --button-secondary-border: #8c00ff;
+    --button-secondary-text: #8c00ff;
+}
+
+/* Importar Roboto desde Google Fonts (agrega en tu HTML dentro de <head>):
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+*/
+
+body {
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    font-family: 'Roboto', Arial, sans-serif; /* Roboto con fallback */
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px;
+}
+
+h1 {
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 600px;
+    margin: 0 auto 1rem auto;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--light-grey-text);
+}
+
+.container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--secondary-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+}
+
+h1, h2, h3 {
+    background: linear-gradient(to right, #ff00ee, #5f00f8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.metodo-pago {
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    background-color: #333; /* Gris oscuro para método de pago */
+}
+
+input[type="text"],
+input[type="month"],
+input[type="password"] {
+    width: calc(100% - 20px); /* Ajuste para padding */
+    padding: 10px;
+    margin: 0.5rem 0;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+    border-color: var(--accent-color);
+}
+
+/* Tarjeta enmascarada (oculta por defecto) */
+.tarjeta-enmascarada {
+    display: none;
+    color: var(--light-grey-text);
+    font-size: 0.9em;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: right;
+    padding-right: 5px;
+}
+
+/* Botones */
+.btn-primary, .btn-secondary {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+.btn-primary {
+    background-color: var(--button-primary-bg);
+    /*color: var(--button-primary-text);*/
+    background: linear-gradient(to right, 
+        #ff00fb 0%, #4800FF 100%);
+}
+
+.btn-primary:hover {
+    background-color: #a040ff; /* Morado más claro */
+}
+
+.btn-secondary {
+    background-color: var(--button-secondary-bg);
+    color: var(--button-secondary-text);
+    border: 1px solid var(--button-secondary-border);
+}
+
+.btn-secondary:hover {
+    background-color: var(--button-secondary-border);
+    color: var(--text-color);
+}
+
+/* Botón general */
+button {
+    background-color: var(--button-primary-bg);
+    color: var(--button-primary-text);
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    width: 100%;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a040ff;
+}
+
+#info-plan {
+    background-color: #202020;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+#info-plan h2 {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+#info-plan p {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+#referenciaOxxo {
+    background-color: #202020;
+    border: 1px dashed var(--accent-color);
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#referenciaOxxo p {
+    margin: 5px 0;
+    color: var(--text-color);
+}
+
+#referenciaOxxo .referencia-num {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--primary-bg-color);
+    padding: 50px 0 20px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.main-footer .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footer-social a {
+    color: var(--text-color);
+    font-size: 1.5em;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--accent-color);
+}
+
+.footer-logo img {
+    height: 35px; /* Adjust logo size */
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.footer-links-col h4 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.footer-links-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links-col a {
+    color: #ccc;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    color: #888;
+}
